@@ -1,0 +1,3787 @@
+[
+    {
+        "id": "676a27b4.246a78",
+        "type": "tab",
+        "label": "Internal Flow API"
+    },
+    {
+        "id": "e43bb8d.d5acc48",
+        "type": "tab",
+        "label": "PMO chart"
+    },
+    {
+        "id": "94ee46c3.537018",
+        "type": "tab",
+        "label": "DB2"
+    },
+    {
+        "id": "90f4b8be.83cce",
+        "type": "tab",
+        "label": "Twitter feed"
+    },
+    {
+        "id": "87d96348.4f92b8",
+        "type": "tab",
+        "label": "Sales demo"
+    },
+    {
+        "id": "da86e3ef.d7037",
+        "type": "tab",
+        "label": "Salesforce upsert"
+    },
+    {
+        "id": "ab873e7e.ac17a8",
+        "type": "tab",
+        "label": "ONG demo"
+    },
+    {
+        "id": "413fba5f.73a724",
+        "type": "tab",
+        "label": "Dynamic_Dashboard"
+    },
+    {
+        "id": "99f0b4ab.0d4df8",
+        "type": "tab",
+        "label": "Oracle demo"
+    },
+    {
+        "id": "963ed49.aa5eca8",
+        "type": "tab",
+        "label": "Data Migration"
+    },
+    {
+        "id": "3002874f.fc9ca",
+        "type": "tab",
+        "label": "Internal APIs"
+    },
+    {
+        "id": "fd2c3483.8380a8",
+        "type": "tab",
+        "label": "Token security"
+    },
+    {
+        "id": "1cdb46ce.173239",
+        "type": "tab",
+        "label": "POST API"
+    },
+    {
+        "id": "1bf518ec.1a9847",
+        "type": "tab",
+        "label": "kong_apis"
+    },
+    {
+        "id": "aa9abc86.f00858",
+        "type": "subflow",
+        "name": "TokenValidation",
+        "info": "",
+        "in": [
+            {
+                "x": 140,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "bb8e6345.e780c8"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1000,
+                "y": 180,
+                "wires": [
+                    {
+                        "id": "e4758b08.3b4168",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 1000,
+                "y": 240,
+                "wires": [
+                    {
+                        "id": "e4758b08.3b4168",
+                        "port": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "8aa64e82.c2d6f",
+        "type": "subflow",
+        "name": "TokenValidation (2)",
+        "info": "",
+        "in": [
+            {
+                "x": 140,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "1948eaa0.c9aedd"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1000,
+                "y": 180,
+                "wires": [
+                    {
+                        "id": "c0ab32a5.f080e8",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 1000,
+                "y": 240,
+                "wires": [
+                    {
+                        "id": "c0ab32a5.f080e8",
+                        "port": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "917dcb61.2e64b",
+        "type": "subflow",
+        "name": "CSV Data",
+        "info": "",
+        "in": [
+            {
+                "x": -33,
+                "y": 310,
+                "wires": [
+                    {
+                        "id": "c8cd04e8.2f0178"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 836.9999847412109,
+                "y": 242,
+                "wires": [
+                    {
+                        "id": "b058999d.edacd",
+                        "port": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "a471b0a6.07b948",
+        "type": "subflow",
+        "name": "MySQL Data",
+        "info": "",
+        "in": [
+            {
+                "x": 78,
+                "y": 176,
+                "wires": [
+                    {
+                        "id": "69dcb84d.16fa58"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 863,
+                "y": 124,
+                "wires": [
+                    {
+                        "id": "4c69ee16.6f37c",
+                        "port": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "7919561a.ef9cf8",
+        "type": "MySQLdatabase",
+        "z": "",
+        "host": "ec2-52-52-226-219.us-west-1.compute.amazonaws.com",
+        "port": "3306",
+        "db": "ecc_config",
+        "tz": ""
+    },
+    {
+        "id": "f31ec427.f37938",
+        "type": "connection-config",
+        "z": "",
+        "name": "SalesForce Connection ",
+        "consumerKey": "3MVG9i1HRpGLXp.o9iIexPBdjnh6G_UK08FFigtXzHUf9n0uBx_tHLv4RTizoD0cA39Le8k45mMUe49l6XVfO",
+        "consumerSecret": "2780386888712835127",
+        "callbackUrl": "http://ec2-35-166-204-206.us-west-2.compute.amazonaws.com:9000/callback",
+        "environment": "production",
+        "username": "karthikeyanb@smartek21.com",
+        "password": "smartek21"
+    },
+    {
+        "id": "5a4da1ee.4f9ad8",
+        "type": "MySQLdatabase",
+        "z": "",
+        "host": "ec2-52-52-226-219.us-west-1.compute.amazonaws.com",
+        "port": "3306",
+        "db": "ecc_config",
+        "tz": ""
+    },
+    {
+        "id": "31bd2f03.556178",
+        "type": "connection-config",
+        "z": "",
+        "name": "SalesForce Connection ",
+        "consumerKey": "3MVG9i1HRpGLXp.o9iIexPBdjnh6G_UK08FFigtXzHUf9n0uBx_tHLv4RTizoD0cA39Le8k45mMUe49l6XVfO",
+        "consumerSecret": "2780386888712835127",
+        "callbackUrl": "https://ecc.com",
+        "environment": "production",
+        "username": "chetand@smartek21.com",
+        "password": "chetan*10"
+    },
+    {
+        "id": "82a69f4b.6c16c",
+        "type": "JsonWebToken_config",
+        "z": "",
+        "name": "ECC",
+        "secret": "ECC"
+    },
+    {
+        "id": "f1deeb3c.445cf",
+        "type": "JsonWebToken_config",
+        "z": "",
+        "name": "IAM",
+        "secret": "IAM"
+    },
+    {
+        "id": "116d155c.81522b",
+        "type": "JsonWebToken_config",
+        "z": "",
+        "name": "ECC",
+        "secret": "ECC"
+    },
+    {
+        "id": "7d1bc4de.62b944",
+        "type": "JsonWebToken_config",
+        "z": "",
+        "name": "IAM",
+        "secret": "IAM"
+    },
+    {
+        "id": "9ee5d6f0.452968",
+        "type": "JsonWebToken_config",
+        "z": "",
+        "name": "ECC",
+        "secret": "ECC"
+    },
+    {
+        "id": "34c11880.fc4d58",
+        "type": "JsonWebToken_config",
+        "z": "",
+        "name": "IAM",
+        "secret": "IAM"
+    },
+    {
+        "id": "b608389.81ad8c8",
+        "type": "MySQLdatabase",
+        "z": "",
+        "host": "localhost",
+        "port": "3306",
+        "db": "iamdb",
+        "tz": ""
+    },
+    {
+        "id": "79137e5a.d2e028",
+        "type": "mongodb",
+        "z": "",
+        "hostname": "127.0.0.1",
+        "port": "27017",
+        "db": "twitdb",
+        "name": "tweets storage"
+    },
+    {
+        "id": "d2359cd1.500a28",
+        "type": "mongodb",
+        "z": "",
+        "hostname": "localhost",
+        "port": "27017",
+        "db": "twitdb",
+        "name": ""
+    },
+    {
+        "id": "4daa69b5.d7f8c",
+        "type": "mongodb2",
+        "z": "",
+        "uri": "mongodb://localhost:27017/twitdb",
+        "name": "Tweets storage",
+        "options": "",
+        "parallelism": ""
+    },
+    {
+        "id": "1ccd06b4.5c3be9",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "Helvetica Neue",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "Helvetica Neue",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "Helvetica Neue"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                }
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "b2084e1f.c0b98",
+        "type": "twitter-credentials",
+        "z": "",
+        "screen_name": "@smartekqa"
+    },
+    {
+        "id": "87b781ae.606fb",
+        "type": "ui_group",
+        "z": "",
+        "name": "Average Load Per Ship(in Gallons)",
+        "tab": "2d2d095f.230306",
+        "disp": true,
+        "width": "10"
+    },
+    {
+        "id": "e602e887.546278",
+        "type": "ui_group",
+        "z": "",
+        "name": "Average Transit Time",
+        "tab": "2d2d095f.230306",
+        "order": 1,
+        "disp": true,
+        "width": "11"
+    },
+    {
+        "id": "2d2d095f.230306",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Chetan DashBoard",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "310132bc.797f5e",
+        "type": "MySQLdatabase",
+        "z": "",
+        "host": "localhost",
+        "port": "3306",
+        "db": "iamdb",
+        "tz": ""
+    },
+    {
+        "id": "f082e5ab.375f58",
+        "type": "http in",
+        "z": "676a27b4.246a78",
+        "name": "listflow",
+        "url": "/listflow",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 138,
+        "y": 111,
+        "wires": [
+            [
+                "98007fc9.b0a8d"
+            ]
+        ]
+    },
+    {
+        "id": "98007fc9.b0a8d",
+        "type": "function",
+        "z": "676a27b4.246a78",
+        "name": "Query",
+        "func": "msg.topic=\"SELECT * FROM flows\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 254,
+        "y": 47,
+        "wires": [
+            [
+                "44d6b533.16a3ac"
+            ]
+        ]
+    },
+    {
+        "id": "44d6b533.16a3ac",
+        "type": "mysql",
+        "z": "676a27b4.246a78",
+        "mydb": "7919561a.ef9cf8",
+        "name": "Flow Config DB",
+        "x": 409,
+        "y": 111,
+        "wires": [
+            [
+                "dc04b497.f69c08"
+            ]
+        ]
+    },
+    {
+        "id": "dc04b497.f69c08",
+        "type": "json",
+        "z": "676a27b4.246a78",
+        "name": "Convert To JSON",
+        "x": 593,
+        "y": 45,
+        "wires": [
+            [
+                "47c84794.0e6ff8"
+            ]
+        ]
+    },
+    {
+        "id": "47c84794.0e6ff8",
+        "type": "http response",
+        "z": "676a27b4.246a78",
+        "name": "",
+        "x": 762,
+        "y": 115,
+        "wires": []
+    },
+    {
+        "id": "e10d0cdb.93598",
+        "type": "http in",
+        "z": "676a27b4.246a78",
+        "name": "saveflow",
+        "url": "/saveflow",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 139,
+        "y": 344,
+        "wires": [
+            [
+                "2c77eb69.846ee4"
+            ]
+        ]
+    },
+    {
+        "id": "2c77eb69.846ee4",
+        "type": "function",
+        "z": "676a27b4.246a78",
+        "name": "Insert Query",
+        "func": "msg.topic=\"INSERT INTO flows (Id, Name, type, product, status, IsActive, created_at) VALUES ('\" + msg.payload.id + \"', '\" + msg.payload.name + \"', '\" + msg.payload.type + \"', '\" + msg.payload.product + \"', '\" + msg.payload.status.replace(\"'\", \"\\\\'\") + \"', 1, NOW());\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 329,
+        "y": 221,
+        "wires": [
+            [
+                "8d4c50a7.31473"
+            ]
+        ]
+    },
+    {
+        "id": "cef1734e.c6b9a",
+        "type": "http response",
+        "z": "676a27b4.246a78",
+        "name": "",
+        "x": 811,
+        "y": 308,
+        "wires": []
+    },
+    {
+        "id": "837c19b4.eaec68",
+        "type": "json",
+        "z": "676a27b4.246a78",
+        "name": "Convert To JSON",
+        "x": 659,
+        "y": 236,
+        "wires": [
+            [
+                "cef1734e.c6b9a"
+            ]
+        ]
+    },
+    {
+        "id": "8d4c50a7.31473",
+        "type": "mysql",
+        "z": "676a27b4.246a78",
+        "mydb": "7919561a.ef9cf8",
+        "name": "",
+        "x": 483,
+        "y": 332,
+        "wires": [
+            [
+                "837c19b4.eaec68"
+            ]
+        ]
+    },
+    {
+        "id": "404dab89.781a24",
+        "type": "http in",
+        "z": "676a27b4.246a78",
+        "name": "deleteflow",
+        "url": "/deleteflow",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 88,
+        "y": 595,
+        "wires": [
+            [
+                "54690cc0.41aad4"
+            ]
+        ]
+    },
+    {
+        "id": "54690cc0.41aad4",
+        "type": "function",
+        "z": "676a27b4.246a78",
+        "name": "Soft Delete Query",
+        "func": "msg.topic=\"UPDATE flows SET IsActive=0, modified_at=NOW() WHERE Id='\" + msg.payload.id + \"';\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 396,
+        "wires": [
+            [
+                "350c6bc7.8a3604"
+            ]
+        ]
+    },
+    {
+        "id": "b16326bc.39b2f8",
+        "type": "http response",
+        "z": "676a27b4.246a78",
+        "name": "",
+        "x": 853,
+        "y": 535,
+        "wires": []
+    },
+    {
+        "id": "350c6bc7.8a3604",
+        "type": "mysql",
+        "z": "676a27b4.246a78",
+        "mydb": "7919561a.ef9cf8",
+        "name": "Flow Config DB",
+        "x": 503,
+        "y": 532,
+        "wires": [
+            [
+                "172122dc.88ab2d"
+            ]
+        ]
+    },
+    {
+        "id": "172122dc.88ab2d",
+        "type": "json",
+        "z": "676a27b4.246a78",
+        "name": "Convert To JSON",
+        "x": 691,
+        "y": 460,
+        "wires": [
+            [
+                "b16326bc.39b2f8"
+            ]
+        ]
+    },
+    {
+        "id": "bc80be26.701ff",
+        "type": "http in",
+        "z": "3002874f.fc9ca",
+        "name": "getTables",
+        "url": "/getTables",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 168,
+        "y": 184,
+        "wires": [
+            [
+                "3cb04503.ae0aaa"
+            ]
+        ]
+    },
+    {
+        "id": "3cb04503.ae0aaa",
+        "type": "Table-List",
+        "z": "3002874f.fc9ca",
+        "name": "GetTableList",
+        "x": 337,
+        "y": 220,
+        "wires": [
+            [
+                "f46e21f0.74d688"
+            ]
+        ]
+    },
+    {
+        "id": "f46e21f0.74d688",
+        "type": "http response",
+        "z": "3002874f.fc9ca",
+        "name": "Res",
+        "x": 533,
+        "y": 176,
+        "wires": []
+    },
+    {
+        "id": "38ddeaf8.b67536",
+        "type": "http in",
+        "z": "3002874f.fc9ca",
+        "name": "getDBs",
+        "url": "/getDBs",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 41,
+        "wires": [
+            [
+                "3ae0bf5d.33cbc"
+            ]
+        ]
+    },
+    {
+        "id": "3ae0bf5d.33cbc",
+        "type": "DB-List",
+        "z": "3002874f.fc9ca",
+        "name": "DB List",
+        "x": 322,
+        "y": 88,
+        "wires": [
+            [
+                "90da1be9.be87e8"
+            ]
+        ]
+    },
+    {
+        "id": "90da1be9.be87e8",
+        "type": "http response",
+        "z": "3002874f.fc9ca",
+        "name": "Res",
+        "x": 518,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "8b4a57f.d61d5a8",
+        "type": "http in",
+        "z": "3002874f.fc9ca",
+        "name": "getColumns",
+        "url": "/getColumns",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 178,
+        "y": 330,
+        "wires": [
+            [
+                "843d1eb6.5b0b58"
+            ]
+        ]
+    },
+    {
+        "id": "843d1eb6.5b0b58",
+        "type": "Column-List",
+        "z": "3002874f.fc9ca",
+        "name": "GetColumns",
+        "x": 339,
+        "y": 395,
+        "wires": [
+            [
+                "bbf3737f.596b38"
+            ]
+        ]
+    },
+    {
+        "id": "bbf3737f.596b38",
+        "type": "http response",
+        "z": "3002874f.fc9ca",
+        "name": "Res",
+        "x": 531,
+        "y": 322,
+        "wires": []
+    },
+    {
+        "id": "a2919cfb.b846b8",
+        "type": "inject",
+        "z": "963ed49.aa5eca8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 105,
+        "y": 76,
+        "wires": [
+            [
+                "2d04683e.00263",
+                "be176c75.022e18"
+            ]
+        ]
+    },
+    {
+        "id": "2d04683e.00263",
+        "type": "mysqldb in",
+        "z": "963ed49.aa5eca8",
+        "name": "",
+        "host": "localhost",
+        "user": "root",
+        "password": "bpt799",
+        "dbname": "iamdb",
+        "tables": "srctable2",
+        "columns": [
+            "eid - int ",
+            "rollno - double ",
+            "firstname - varchar 30",
+            "lastname - varchar 30",
+            "Client - varchar 20",
+            "City - varchar 20",
+            "State - varchar 20",
+            "Country - varchar 20"
+        ],
+        "x": 188,
+        "y": 186,
+        "wires": [
+            [
+                "fa5020ff.f0dff"
+            ]
+        ]
+    },
+    {
+        "id": "b724621.0e9a8a",
+        "type": "mysqldb out",
+        "z": "963ed49.aa5eca8",
+        "name": "",
+        "host": "localhost",
+        "user": "root",
+        "password": "bpt799",
+        "dbname": "QA_Aravind",
+        "tables": "dest21",
+        "isNewTable": false,
+        "tableName": "",
+        "columns": [
+            "user1_eid - int ",
+            "user1_rollno - double ",
+            "user1_firstname - varchar 30",
+            "user1_lastname - varchar 30",
+            "user1_project - varchar 30",
+            "user1_projectid - varchar 30",
+            "user1_billable - char 1",
+            "user2_eid - int ",
+            "user2_rollno - double ",
+            "user2_firstname - varchar 30",
+            "user2_lastname - varchar 30",
+            "user2_Client - varchar 20",
+            "user2_City - varchar 20",
+            "user2_State - varchar 20",
+            "user2_Country - varchar 20",
+            "user2_fullname - varchar 600"
+        ],
+        "synccolumns": "user1_eid - int ",
+        "x": 759,
+        "y": 289,
+        "wires": [
+            [
+                "ab47e51b.6a04e"
+            ]
+        ]
+    },
+    {
+        "id": "be176c75.022e18",
+        "type": "mysqldb in",
+        "z": "963ed49.aa5eca8",
+        "name": "",
+        "host": "localhost",
+        "user": "root",
+        "password": "bpt799",
+        "dbname": "iamdb",
+        "tables": "srctable1",
+        "columns": [
+            "eid - int ",
+            "rollno - double ",
+            "firstname - varchar 30",
+            "lastname - varchar 30",
+            "project - varchar 30",
+            "projectid - varchar 30",
+            "billable - char 1"
+        ],
+        "x": 318,
+        "y": 38,
+        "wires": [
+            [
+                "caf12237.331928"
+            ]
+        ]
+    },
+    {
+        "id": "229f3716.9d3b4",
+        "type": "joinSchemaJson",
+        "z": "963ed49.aa5eca8",
+        "flow1": "user1",
+        "flow2": "user2",
+        "id1": "eid",
+        "id2": "eid",
+        "x": 658,
+        "y": 215,
+        "wires": [
+            [
+                "51df8607.4a45e"
+            ]
+        ]
+    },
+    {
+        "id": "fa5020ff.f0dff",
+        "type": "json",
+        "z": "963ed49.aa5eca8",
+        "name": "",
+        "x": 202.5,
+        "y": 288,
+        "wires": [
+            [
+                "99bb6290.f7cac"
+            ]
+        ]
+    },
+    {
+        "id": "caf12237.331928",
+        "type": "json",
+        "z": "963ed49.aa5eca8",
+        "name": "",
+        "x": 475,
+        "y": 64,
+        "wires": [
+            [
+                "6dd14e87.47837"
+            ]
+        ]
+    },
+    {
+        "id": "51df8607.4a45e",
+        "type": "json",
+        "z": "963ed49.aa5eca8",
+        "name": "",
+        "x": 854,
+        "y": 213,
+        "wires": [
+            [
+                "b724621.0e9a8a"
+            ]
+        ]
+    },
+    {
+        "id": "ab47e51b.6a04e",
+        "type": "debug",
+        "z": "963ed49.aa5eca8",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 705,
+        "y": 366,
+        "wires": []
+    },
+    {
+        "id": "880584dd.0c91d8",
+        "type": "Flow",
+        "z": "963ed49.aa5eca8",
+        "name": "user2",
+        "x": 459,
+        "y": 285,
+        "wires": [
+            [
+                "229f3716.9d3b4"
+            ]
+        ]
+    },
+    {
+        "id": "6dd14e87.47837",
+        "type": "Flow",
+        "z": "963ed49.aa5eca8",
+        "name": "user1",
+        "x": 507,
+        "y": 150,
+        "wires": [
+            [
+                "229f3716.9d3b4"
+            ]
+        ]
+    },
+    {
+        "id": "99bb6290.f7cac",
+        "type": "Transform-Node",
+        "z": "963ed49.aa5eca8",
+        "name": "",
+        "expression1": "[firstname].concat(\" \").concat([lastname])",
+        "outputColumn1": "fullname",
+        "datatype1": "varchar 600",
+        "expression2": "",
+        "outputColumn2": "",
+        "datatype2": "",
+        "expression3": "",
+        "outputColumn3": "",
+        "datatype3": "",
+        "expression4": "",
+        "outputColumn4": "",
+        "datatype4": "",
+        "expression5": "",
+        "outputColumn5": "",
+        "datatype5": "",
+        "btn": "",
+        "x": 311,
+        "y": 364,
+        "wires": [
+            [
+                "880584dd.0c91d8"
+            ]
+        ]
+    },
+    {
+        "id": "8c75674e.fbeea",
+        "type": "function",
+        "z": "99f0b4ab.0d4df8",
+        "name": "Set global vars",
+        "func": "global.set(\"req1\",msg.req);\nglobal.set(\"res1\",msg.res);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 263,
+        "y": 68,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "31cbcc6.e474034",
+        "type": "http in",
+        "z": "99f0b4ab.0d4df8",
+        "name": "",
+        "url": "/oracle",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 77,
+        "y": 68,
+        "wires": [
+            [
+                "8c75674e.fbeea"
+            ]
+        ]
+    },
+    {
+        "id": "ec298e1a.cbac6",
+        "type": "function",
+        "z": "99f0b4ab.0d4df8",
+        "name": "Get global vars",
+        "func": "msg.req = global.get(\"req1\");\nmsg.res = global.get(\"res1\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 641,
+        "y": 68,
+        "wires": [
+            [
+                "5e15fafb.31725c"
+            ]
+        ]
+    },
+    {
+        "id": "5e15fafb.31725c",
+        "type": "template",
+        "z": "99f0b4ab.0d4df8",
+        "name": "Prettify data",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html>\n    <head>\n        <style>\n            td, th {\n                    width: 8rem;\n                    height: 3rem;\n                    border: 1px solid #ccc;\n                    text-align: center;\n                    \n            }\n            th{\n                background: lightblue;\n                border-color: white;\n                font-variant: small-caps;\n                font-size: 21px;\n                \n            }   \n            h3{\n                text-align: center;\n                font-family: Segoe UI;\n                font-size: 21px;\n                font-weight: normal\n            }\n            body {\n                padding: 1rem;\n            }\n            tr:hover{background-color:#f5f5f5}\n            table{   \n                font-family: Segoe UI;\n                font-size: 16px;\n                border-collapse: collapse;\n                width: 50%;\n            }\n        </style>\n    </head>\n    <body>\n        <h3 align=\"center\"> Data from oracle database using oracledb connector</label>\n        <br/>\n        <br/>\n        <table align=\"center\">      \n            <thead>\n                <tr>\n                    <th>Employee Id</th>\n                    <th>Employee Name</th>\n                    <th>Department Name</th>\n                </tr>\n            </thead>\n            <tbody>\n                 {{#payload}}\n                    <tr>\n                        <td>{{EMPID}}</td>\n                        <td>{{EMPNAME}}</td>\n                        <td>{{DEPTNAME}}</td>\n                    </tr>\n                 {{/payload}}\n            </tbody>\n        </table>\n    </body>\n</html>\n",
+        "x": 816,
+        "y": 68,
+        "wires": [
+            [
+                "1af07c0c.003154"
+            ]
+        ]
+    },
+    {
+        "id": "1af07c0c.003154",
+        "type": "http response",
+        "z": "99f0b4ab.0d4df8",
+        "name": "prettified data ",
+        "x": 1010.5,
+        "y": 51,
+        "wires": []
+    },
+    {
+        "id": "175c8cac.b049b3",
+        "type": "http in",
+        "z": "99f0b4ab.0d4df8",
+        "name": "",
+        "url": "/insert",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 79,
+        "y": 169,
+        "wires": [
+            [
+                "b39d53d9.4939f"
+            ]
+        ]
+    },
+    {
+        "id": "ae0217f1.e86b4",
+        "type": "http response",
+        "z": "99f0b4ab.0d4df8",
+        "name": "result: insert",
+        "x": 1002.5,
+        "y": 169,
+        "wires": []
+    },
+    {
+        "id": "49408796.b2a6d",
+        "type": "function",
+        "z": "99f0b4ab.0d4df8",
+        "name": "get global vars",
+        "func": "msg.req = global.get(\"req2\");\nmsg.res = global.get(\"res2\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 810,
+        "y": 169,
+        "wires": [
+            [
+                "ae0217f1.e86b4"
+            ]
+        ]
+    },
+    {
+        "id": "b39d53d9.4939f",
+        "type": "function",
+        "z": "99f0b4ab.0d4df8",
+        "name": "set global vars",
+        "func": "global.set(\"req2\",msg.req);\nglobal.set(\"res2\",msg.res);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 260.5,
+        "y": 169,
+        "wires": [
+            [
+                "65507d5a.b756c4"
+            ]
+        ]
+    },
+    {
+        "id": "37af5f99.e28078",
+        "type": "http in",
+        "z": "99f0b4ab.0d4df8",
+        "name": "",
+        "url": "/delete",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 75,
+        "y": 500,
+        "wires": [
+            [
+                "2721c599.c79b42"
+            ]
+        ]
+    },
+    {
+        "id": "2721c599.c79b42",
+        "type": "function",
+        "z": "99f0b4ab.0d4df8",
+        "name": "set global vars",
+        "func": "global.set(\"req5\",msg.req);\nglobal.set(\"res5\",msg.res);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 254.5,
+        "y": 500,
+        "wires": [
+            [
+                "b2d8b5a3.2e7f78"
+            ]
+        ]
+    },
+    {
+        "id": "b2d8b5a3.2e7f78",
+        "type": "function",
+        "z": "99f0b4ab.0d4df8",
+        "name": "delete query",
+        "func": "msg.query = \"delete from demotab where empid='\"+msg.payload.empid+\"'\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 438,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "740387c2.144f9",
+        "type": "function",
+        "z": "99f0b4ab.0d4df8",
+        "name": "get global vars",
+        "func": "msg.req = global.get(\"req5\");\nmsg.res = global.get(\"res5\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 814,
+        "y": 499,
+        "wires": [
+            [
+                "b7d16154.b0178"
+            ]
+        ]
+    },
+    {
+        "id": "b7d16154.b0178",
+        "type": "http response",
+        "z": "99f0b4ab.0d4df8",
+        "name": "result: delete",
+        "x": 1005.5,
+        "y": 498,
+        "wires": []
+    },
+    {
+        "id": "65507d5a.b756c4",
+        "type": "function",
+        "z": "99f0b4ab.0d4df8",
+        "name": "insert query",
+        "func": "msg.query = \"insert into demotab(empid, empname, deptname) values ('\"+ msg.payload.empid +\"','\"+ msg.payload.empname +\"','\"+ msg.payload.deptname +\"')\" ;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 441,
+        "y": 169,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1886f59c.372bf2",
+        "type": "http in",
+        "z": "99f0b4ab.0d4df8",
+        "name": "",
+        "url": "/update",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 77,
+        "y": 378,
+        "wires": [
+            [
+                "c42902d4.82c4f8"
+            ]
+        ]
+    },
+    {
+        "id": "c42902d4.82c4f8",
+        "type": "function",
+        "z": "99f0b4ab.0d4df8",
+        "name": "set global vars",
+        "func": "global.set(\"req4\",msg.req);\nglobal.set(\"res4\",msg.res);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 259.5,
+        "y": 378,
+        "wires": [
+            [
+                "36dbbee6.b68192"
+            ]
+        ]
+    },
+    {
+        "id": "5c27afa7.064c4",
+        "type": "function",
+        "z": "99f0b4ab.0d4df8",
+        "name": "get global vars",
+        "func": "msg.req = global.get(\"req4\");\nmsg.res = global.get(\"res4\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 834,
+        "y": 376,
+        "wires": [
+            [
+                "816c02c2.dc2538"
+            ]
+        ]
+    },
+    {
+        "id": "816c02c2.dc2538",
+        "type": "http response",
+        "z": "99f0b4ab.0d4df8",
+        "name": "result: update",
+        "x": 1023.5,
+        "y": 376,
+        "wires": []
+    },
+    {
+        "id": "36dbbee6.b68192",
+        "type": "function",
+        "z": "99f0b4ab.0d4df8",
+        "name": "update query",
+        "func": "msg.query =\"update demotab set empname='\"+ msg.payload.empname +\"' where EMPID='\"+ msg.payload.empid +\"'\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 452,
+        "y": 377,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b471031b.e8f128",
+        "type": "http in",
+        "z": "99f0b4ab.0d4df8",
+        "name": "",
+        "url": "/select",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 77,
+        "y": 267,
+        "wires": [
+            [
+                "11181c45.3489f4"
+            ]
+        ]
+    },
+    {
+        "id": "11181c45.3489f4",
+        "type": "function",
+        "z": "99f0b4ab.0d4df8",
+        "name": "set global vars",
+        "func": "global.set(\"req3\",msg.req);\nglobal.set(\"res3\",msg.res);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 258.5,
+        "y": 267,
+        "wires": [
+            [
+                "ce8b6021.798c78"
+            ]
+        ]
+    },
+    {
+        "id": "ce8b6021.798c78",
+        "type": "function",
+        "z": "99f0b4ab.0d4df8",
+        "name": "select query",
+        "func": "msg.query =\"select * from demotab where empid=\" + msg.payload.empid ;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 443,
+        "y": 266,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dfc26cae.e323e",
+        "type": "function",
+        "z": "99f0b4ab.0d4df8",
+        "name": "get global vars",
+        "func": "msg.req = global.get(\"req3\");\nmsg.res = global.get(\"res3\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 818,
+        "y": 266,
+        "wires": [
+            [
+                "c73a56.407b05a8"
+            ]
+        ]
+    },
+    {
+        "id": "c73a56.407b05a8",
+        "type": "http response",
+        "z": "99f0b4ab.0d4df8",
+        "name": "result: select",
+        "x": 1004.5,
+        "y": 265,
+        "wires": []
+    },
+    {
+        "id": "8ae0e1b9.7f32f8",
+        "type": "soql",
+        "z": "87d96348.4f92b8",
+        "name": "SalesForce ",
+        "query": "SELECT ID, sum(ExpectedRevenue) Expectedrevenue , Name,Account.CompanyCode__c companycode, Account.Industry, owner.Name Salesperson, LeadSource , Account.BillingCountry ,Account.Billingstate, Account.BillingCity, FiscalYear, CALENDAR_YEAR(CloseDate) Year, CALENDAR_MONTH(CloseDate) Month, DAY_IN_WEEK(CloseDate) Week, Type from Opportunity GROUP BY ID, Name, Account.Industry, LeadSource, CloseDate, Type,FiscalYear, owner.Name, Account.Billingstate, Account.BillingCity, Account.BillingCountry, Account.CompanyCode__c",
+        "connection": "31bd2f03.556178",
+        "x": 250.5,
+        "y": 100,
+        "wires": [
+            [
+                "330a1b1a.1bcb2c"
+            ]
+        ]
+    },
+    {
+        "id": "34c4ef00.2e1702",
+        "type": "http in",
+        "z": "87d96348.4f92b8",
+        "name": "Sales Dashboard API",
+        "url": "/testSaleForce",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 105,
+        "y": 188,
+        "wires": [
+            [
+                "8ae0e1b9.7f32f8",
+                "a59f600.7d88f2"
+            ]
+        ]
+    },
+    {
+        "id": "bf36230e.3f1ff8",
+        "type": "http response",
+        "z": "87d96348.4f92b8",
+        "name": "Response",
+        "x": 737,
+        "y": 248,
+        "wires": []
+    },
+    {
+        "id": "a59f600.7d88f2",
+        "type": "function",
+        "z": "87d96348.4f92b8",
+        "name": "Booked Revenue Query",
+        "func": "msg.topic = \"select BALANCE as bookedrevenue,COMP_CODE from GLBalance where GL_ACCOUNT = '0000410081' \";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 233.5,
+        "y": 288,
+        "wires": [
+            [
+                "d8334c68.41ca48"
+            ]
+        ]
+    },
+    {
+        "id": "cf7d5668.a990e8",
+        "type": "function",
+        "z": "87d96348.4f92b8",
+        "name": "Flow Name",
+        "func": "msg.topic = 'mysql';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 509.5,
+        "y": 300,
+        "wires": [
+            [
+                "c5f16a53.fc5b5"
+            ]
+        ]
+    },
+    {
+        "id": "c5f16a53.fc5b5",
+        "type": "function",
+        "z": "87d96348.4f92b8",
+        "name": "Join",
+        "func": "context.data = context.data || new Object();\nswitch (msg.topic) {\n    case \"salesForceDetailData\":\n        context.data.task1 = msg.payload;\n        break;\n    case \"mysql\":\n        context.data.task2 = msg.payload;\n        break;\n    default:\n    \tbreak;\n}\nif(context.data.task1 != null && context.data.task2 != null) {\n    var tpmArray1 = JSON.parse(JSON.stringify(context.data.task1));\n    var tpmArray2 = JSON.parse(JSON.stringify(context.data.task2));\n    for(var i =0; i < tpmArray2.length; i++ ){\n        // console.log(tpmArray1.records[i]);\n        if(tpmArray1.records[i][\"companycode\"] == tpmArray2[i][\"COMP_CODE\"])\n          tpmArray1.records[i][\"bookedrevenue\"] = tpmArray2[i][\"bookedrevenue\"];\n      }\n    msg.payload = tpmArray1;\n \treturn msg;\n} ",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 607.5,
+        "y": 170,
+        "wires": [
+            [
+                "bf36230e.3f1ff8",
+                "4ea7a0a4.8fbd2",
+                "70ab8c6b.736cf4"
+            ]
+        ]
+    },
+    {
+        "id": "330a1b1a.1bcb2c",
+        "type": "function",
+        "z": "87d96348.4f92b8",
+        "name": "Flow Name",
+        "func": "msg.topic = 'salesForceDetailData';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 471.5,
+        "y": 88,
+        "wires": [
+            [
+                "c5f16a53.fc5b5"
+            ]
+        ]
+    },
+    {
+        "id": "d8334c68.41ca48",
+        "type": "mysql",
+        "z": "87d96348.4f92b8",
+        "mydb": "5a4da1ee.4f9ad8",
+        "name": "",
+        "x": 355.5,
+        "y": 354,
+        "wires": [
+            [
+                "cf7d5668.a990e8",
+                "154b19f6.4e4376"
+            ]
+        ]
+    },
+    {
+        "id": "154b19f6.4e4376",
+        "type": "debug",
+        "z": "87d96348.4f92b8",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 715,
+        "y": 458,
+        "wires": []
+    },
+    {
+        "id": "4ea7a0a4.8fbd2",
+        "type": "debug",
+        "z": "87d96348.4f92b8",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 790,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "d9b49a04.d26fd",
+        "type": "http in",
+        "z": "da86e3ef.d7037",
+        "name": "",
+        "url": "/createopportunity",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 119,
+        "y": 89,
+        "wires": [
+            [
+                "29a944ec.595b64"
+            ]
+        ]
+    },
+    {
+        "id": "29a944ec.595b64",
+        "type": "function",
+        "z": "da86e3ef.d7037",
+        "name": "prep",
+        "func": "/*msg.payload = {\n  \"Name\": \"tetsss\",\n  \"StageName\": \"Prospecting\",\n  \"CloseDate\":\"2017-06-03\",\n  \"AccountId\":\"001E000000L1LKG\",\n  \"Type\":\"Prospect\",\n  \"LeadSource\":\"Phone Inquiry\",\n  \"Description\":\"Chetan added it for testing\",\n  \"Amount\":\"1.5\",\n}*/\n//console.log(msg);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 336,
+        "y": 90,
+        "wires": [
+            [
+                "4f3ded8a.e54884"
+            ]
+        ]
+    },
+    {
+        "id": "4f3ded8a.e54884",
+        "type": "dml",
+        "z": "da86e3ef.d7037",
+        "name": "insert to salesforce",
+        "object": "Opportunity",
+        "action": "insert",
+        "connection": "31bd2f03.556178",
+        "x": 573,
+        "y": 62,
+        "wires": [
+            [
+                "d3039999.9866b"
+            ]
+        ]
+    },
+    {
+        "id": "d3039999.9866b",
+        "type": "http response",
+        "z": "da86e3ef.d7037",
+        "name": "",
+        "x": 799,
+        "y": 88,
+        "wires": []
+    },
+    {
+        "id": "38d9efd4.e73e08",
+        "type": "soql",
+        "z": "da86e3ef.d7037",
+        "name": "Account details",
+        "query": "select account.id, account.Name from account",
+        "connection": "31bd2f03.556178",
+        "x": 466.5,
+        "y": 233,
+        "wires": [
+            [
+                "eae8c5d7.9c262"
+            ]
+        ]
+    },
+    {
+        "id": "1968aabe.370175",
+        "type": "http in",
+        "z": "da86e3ef.d7037",
+        "name": "",
+        "url": "/getaccountdetails",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 232,
+        "wires": [
+            [
+                "38d9efd4.e73e08"
+            ]
+        ]
+    },
+    {
+        "id": "eae8c5d7.9c262",
+        "type": "http response",
+        "z": "da86e3ef.d7037",
+        "name": "",
+        "x": 744,
+        "y": 231,
+        "wires": []
+    },
+    {
+        "id": "25ea627d.e91566",
+        "type": "dml",
+        "z": "da86e3ef.d7037",
+        "name": "Update salesforce",
+        "object": "Opportunity",
+        "action": "update",
+        "connection": "31bd2f03.556178",
+        "x": 505,
+        "y": 381,
+        "wires": [
+            [
+                "e3462065.23194"
+            ]
+        ]
+    },
+    {
+        "id": "275f1370.3c6ad4",
+        "type": "function",
+        "z": "da86e3ef.d7037",
+        "name": "prep",
+        "func": "/*msg.payload = \n{\n  \"Id\": \"0060L00000isVk1\",\n \"Name\": \"hello\",\n  \"Type\": \"Existing Customer - Upgrade\",\n  \"LeadSource\":\"Other\",\n  \"Description\":\"Chetan added it for testing\",\n  \"AccountId\":\"001E000000L1LKJ\",\n  \"Amount\":\"15\",\n  \"StageName\": \"Qualification\",\n  \"CloseDate\":\"2017-07-03\",\n}*/\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 326,
+        "y": 380,
+        "wires": [
+            [
+                "25ea627d.e91566"
+            ]
+        ]
+    },
+    {
+        "id": "41cb5c29.f979c4",
+        "type": "http in",
+        "z": "da86e3ef.d7037",
+        "name": "",
+        "url": "/updateopportunity",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 122,
+        "y": 380,
+        "wires": [
+            [
+                "275f1370.3c6ad4"
+            ]
+        ]
+    },
+    {
+        "id": "e3462065.23194",
+        "type": "http response",
+        "z": "da86e3ef.d7037",
+        "name": "",
+        "x": 696,
+        "y": 383,
+        "wires": []
+    },
+    {
+        "id": "d2f3037b.e8e968",
+        "type": "soql",
+        "z": "da86e3ef.d7037",
+        "name": "Get Opportunity Data",
+        "query": "SELECT ID , Name, LeadSource, StageName, CloseDate, amount, Description, Type, Account.Id, Account.name from Opportunity",
+        "connection": "31bd2f03.556178",
+        "x": 414.5,
+        "y": 496,
+        "wires": [
+            [
+                "fef78b5.d4b5578",
+                "51fd03df.5b4ae4"
+            ]
+        ]
+    },
+    {
+        "id": "1fa2428c.d017cd",
+        "type": "inject",
+        "z": "da86e3ef.d7037",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 89.5,
+        "y": 465,
+        "wires": [
+            [
+                "d2f3037b.e8e968"
+            ]
+        ]
+    },
+    {
+        "id": "fef78b5.d4b5578",
+        "type": "debug",
+        "z": "da86e3ef.d7037",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 676,
+        "y": 473,
+        "wires": []
+    },
+    {
+        "id": "48ca31f2.8f6a48",
+        "type": "http in",
+        "z": "da86e3ef.d7037",
+        "name": "",
+        "url": "/getopportunitydata",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 162,
+        "y": 539,
+        "wires": [
+            [
+                "d2f3037b.e8e968"
+            ]
+        ]
+    },
+    {
+        "id": "51fd03df.5b4ae4",
+        "type": "http response",
+        "z": "da86e3ef.d7037",
+        "name": "",
+        "x": 662,
+        "y": 538,
+        "wires": []
+    },
+    {
+        "id": "ccd08f5.2090cf",
+        "type": "json",
+        "z": "ab873e7e.ac17a8",
+        "name": "Convert to Json",
+        "x": 783,
+        "y": 695,
+        "wires": [
+            [
+                "cc6d7ab8.4b1be8"
+            ]
+        ]
+    },
+    {
+        "id": "56fff79d.7c6ef8",
+        "type": "csv",
+        "z": "ab873e7e.ac17a8",
+        "name": "Read csv file ",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "class,maintenance,fuel,service,month",
+        "x": 547.4999694824219,
+        "y": 673,
+        "wires": [
+            [
+                "ccd08f5.2090cf"
+            ]
+        ]
+    },
+    {
+        "id": "416ae65f.7d06b8",
+        "type": "file in",
+        "z": "ab873e7e.ac17a8",
+        "name": "CSV file",
+        "filename": "/home/eccusr/Wrk/incoming/Cost_by_class.csv",
+        "format": "utf8",
+        "x": 347.99993896484375,
+        "y": 685,
+        "wires": [
+            [
+                "56fff79d.7c6ef8"
+            ]
+        ]
+    },
+    {
+        "id": "b7f7c9b8.a67c78",
+        "type": "function",
+        "z": "ab873e7e.ac17a8",
+        "name": "Ship Cost",
+        "func": "msg.topic=\"File\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 293.00001525878906,
+        "y": 590,
+        "wires": [
+            [
+                "416ae65f.7d06b8"
+            ]
+        ]
+    },
+    {
+        "id": "2400002c.b6913",
+        "type": "json",
+        "z": "ab873e7e.ac17a8",
+        "name": "Convert to Json",
+        "x": 735,
+        "y": 90,
+        "wires": [
+            [
+                "8d43775a.65e01"
+            ]
+        ]
+    },
+    {
+        "id": "c706d0cf.675cb8",
+        "type": "function",
+        "z": "ab873e7e.ac17a8",
+        "name": "Ship Load",
+        "func": "msg.topic=\"File\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 343.0000305175781,
+        "y": 82,
+        "wires": [
+            [
+                "8a6f9b1f.934ed8"
+            ]
+        ]
+    },
+    {
+        "id": "c0a97ebd.35b86",
+        "type": "json",
+        "z": "ab873e7e.ac17a8",
+        "name": "Convert to Json",
+        "x": 786,
+        "y": 271,
+        "wires": [
+            [
+                "62a0a451.c9fbe4"
+            ]
+        ]
+    },
+    {
+        "id": "8f37f221.6f34a",
+        "type": "function",
+        "z": "ab873e7e.ac17a8",
+        "name": "Ship Service Hrs",
+        "func": "msg.topic=\"File\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 394.0000305175781,
+        "y": 274,
+        "wires": [
+            [
+                "a1095db6.8a33a8"
+            ]
+        ]
+    },
+    {
+        "id": "6e62917d.99bc88",
+        "type": "json",
+        "z": "ab873e7e.ac17a8",
+        "name": "Convert to Json",
+        "x": 734,
+        "y": 440,
+        "wires": [
+            [
+                "a5f82518.b7b728"
+            ]
+        ]
+    },
+    {
+        "id": "ef1322bb.f175",
+        "type": "csv",
+        "z": "ab873e7e.ac17a8",
+        "name": "Read csv file ",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "Name,Fleet,Transit_Time,Route",
+        "x": 542.4999694824219,
+        "y": 389,
+        "wires": [
+            [
+                "6e62917d.99bc88"
+            ]
+        ]
+    },
+    {
+        "id": "22dca922.cb2c06",
+        "type": "file in",
+        "z": "ab873e7e.ac17a8",
+        "name": "CSV file",
+        "filename": "/home/eccusr/Wrk/incoming/Transit_time.csv",
+        "format": "utf8",
+        "x": 381.99993896484375,
+        "y": 494,
+        "wires": [
+            [
+                "ef1322bb.f175"
+            ]
+        ]
+    },
+    {
+        "id": "d6d7fc1.39eda8",
+        "type": "function",
+        "z": "ab873e7e.ac17a8",
+        "name": "Transit Time",
+        "func": "msg.topic=\"File\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 327.00001525878906,
+        "y": 408,
+        "wires": [
+            [
+                "22dca922.cb2c06"
+            ]
+        ]
+    },
+    {
+        "id": "7a36e6a8.655a48",
+        "type": "http in",
+        "z": "ab873e7e.ac17a8",
+        "name": "",
+        "url": "/ONG/ShipCost",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 95,
+        "y": 667,
+        "wires": [
+            [
+                "b7f7c9b8.a67c78"
+            ]
+        ]
+    },
+    {
+        "id": "cc6d7ab8.4b1be8",
+        "type": "http response",
+        "z": "ab873e7e.ac17a8",
+        "name": "",
+        "x": 1079,
+        "y": 730,
+        "wires": []
+    },
+    {
+        "id": "833ed3e1.f7b8d",
+        "type": "http response",
+        "z": "ab873e7e.ac17a8",
+        "name": "",
+        "x": 1176,
+        "y": 179,
+        "wires": []
+    },
+    {
+        "id": "62a0a451.c9fbe4",
+        "type": "http response",
+        "z": "ab873e7e.ac17a8",
+        "name": "",
+        "x": 1017,
+        "y": 273,
+        "wires": []
+    },
+    {
+        "id": "2ed99b4d.428c2c",
+        "type": "http response",
+        "z": "ab873e7e.ac17a8",
+        "name": "",
+        "x": 1068,
+        "y": 523,
+        "wires": []
+    },
+    {
+        "id": "a351a68f.30829",
+        "type": "http in",
+        "z": "ab873e7e.ac17a8",
+        "name": "",
+        "url": "/ONG/ShipLoad",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 104,
+        "wires": [
+            [
+                "c706d0cf.675cb8"
+            ]
+        ]
+    },
+    {
+        "id": "dbc57142.086ea8",
+        "type": "http in",
+        "z": "ab873e7e.ac17a8",
+        "name": "",
+        "url": "/ONG/ShipServiceHrs",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 121,
+        "y": 271,
+        "wires": [
+            [
+                "8f37f221.6f34a"
+            ]
+        ]
+    },
+    {
+        "id": "ee85a75f.58dec",
+        "type": "http in",
+        "z": "ab873e7e.ac17a8",
+        "name": "",
+        "url": "/ONG/TransitTime",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 107,
+        "y": 459,
+        "wires": [
+            [
+                "d6d7fc1.39eda8"
+            ]
+        ]
+    },
+    {
+        "id": "8d43775a.65e01",
+        "type": "Filter",
+        "z": "ab873e7e.ac17a8",
+        "name": "fleet filter",
+        "ConditionColumn": "Fleet",
+        "operator": "==",
+        "ConditionValue": "Atlantic",
+        "x": 918.5,
+        "y": 91,
+        "wires": [
+            [
+                "833ed3e1.f7b8d"
+            ]
+        ]
+    },
+    {
+        "id": "3649b8d8.848ad",
+        "type": "comment",
+        "z": "ab873e7e.ac17a8",
+        "name": "Average load per Ship",
+        "info": "",
+        "x": 131.5,
+        "y": 59,
+        "wires": []
+    },
+    {
+        "id": "7c9b3da6.dcc054",
+        "type": "comment",
+        "z": "ab873e7e.ac17a8",
+        "name": "Operation Status",
+        "info": "",
+        "x": 106,
+        "y": 230,
+        "wires": []
+    },
+    {
+        "id": "d8dc68e7.5ce14",
+        "type": "comment",
+        "z": "ab873e7e.ac17a8",
+        "name": "Average Transit Time",
+        "info": "",
+        "x": 136,
+        "y": 410,
+        "wires": []
+    },
+    {
+        "id": "f03905a9.2321c",
+        "type": "comment",
+        "z": "ab873e7e.ac17a8",
+        "name": "Operation Cost",
+        "info": "",
+        "x": 88,
+        "y": 621,
+        "wires": []
+    },
+    {
+        "id": "a1095db6.8a33a8",
+        "type": "ala-file",
+        "z": "ab873e7e.ac17a8",
+        "name": "xlsx file",
+        "filename": "/home/eccusr/Wrk/incoming/Service_Hrs_by_Ship",
+        "format": "xlsx",
+        "columns": "*",
+        "headers": true,
+        "x": 599.5,
+        "y": 271,
+        "wires": [
+            [
+                "c0a97ebd.35b86"
+            ]
+        ]
+    },
+    {
+        "id": "96ee1801.639e8",
+        "type": "AccessDB",
+        "z": "ab873e7e.ac17a8",
+        "name": "",
+        "Connection": "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=/home/aravindhana/QA/Database1.mdb",
+        "Qtype": "Query",
+        "Query": "SELECT * FROM Load_by_Ship",
+        "x": 638,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cc78b6a0.2ee1d",
+        "type": "comment",
+        "z": "ab873e7e.ac17a8",
+        "name": "Access DB Custom Node",
+        "info": "",
+        "x": 840,
+        "y": 22,
+        "wires": []
+    },
+    {
+        "id": "361d5458.887664",
+        "type": "comment",
+        "z": "ab873e7e.ac17a8",
+        "name": "Excel Node",
+        "info": "",
+        "x": 599,
+        "y": 204,
+        "wires": []
+    },
+    {
+        "id": "c68c75fc.033a58",
+        "type": "inject",
+        "z": "ab873e7e.ac17a8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 132,
+        "y": 333,
+        "wires": [
+            [
+                "8f37f221.6f34a",
+                "d6d7fc1.39eda8",
+                "b7f7c9b8.a67c78"
+            ]
+        ]
+    },
+    {
+        "id": "a5f82518.b7b728",
+        "type": "Aggregation",
+        "z": "ab873e7e.ac17a8",
+        "name": "",
+        "groupByColumn": "Fleet",
+        "operation": "avg",
+        "operationOn": "Transit_Time",
+        "x": 896,
+        "y": 518,
+        "wires": [
+            [
+                "2ed99b4d.428c2c"
+            ]
+        ]
+    },
+    {
+        "id": "52751063.e48598",
+        "type": "function",
+        "z": "94ee46c3.537018",
+        "name": "DB2 Query",
+        "func": "global.set(\"req1\",msg.req);\nglobal.set(\"res1\",msg.res);\nmsg.database=\"sample\";\nmsg.topic=\"select * from employee1\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 239.5,
+        "y": 131,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c6b19c5.cc9b3e",
+        "type": "join",
+        "z": "94ee46c3.537018",
+        "name": "",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "timeout": "1",
+        "count": "",
+        "x": 444,
+        "y": 299,
+        "wires": [
+            [
+                "7e49fb92.91523c"
+            ]
+        ]
+    },
+    {
+        "id": "ed801a5b.e484f",
+        "type": "function",
+        "z": "94ee46c3.537018",
+        "name": "ignore blank",
+        "func": "\nif (msg.payload!==undefined)\n{\nmsg.req = global.get(\"req1\");\nmsg.res = global.get(\"res1\");    \nreturn msg;\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 357.5,
+        "y": 246,
+        "wires": [
+            [
+                "c6b19c5.cc9b3e"
+            ]
+        ]
+    },
+    {
+        "id": "e0fb10c9.e7156",
+        "type": "template",
+        "z": "94ee46c3.537018",
+        "name": "Pettify data",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html>\n    <head>\n        <style>\n            td, th {\n                    width: 8rem;\n                    height: 3rem;\n                    border: 1px solid #ccc;\n                    text-align: center;\n                    \n            }\n            th{\n                background: lightblue;\n                border-color: white;\n                font-variant: small-caps;\n                font-size: 21px;\n                \n            }   \n            h3{\n                text-align: center;\n                font-family: Segoe UI;\n                font-size: 21px;\n                font-weight: normal\n            }\n            body {\n                padding: 1rem;\n            }\n            tr:hover{background-color:#f5f5f5}\n            table{   \n                font-family: Segoe UI;\n                font-size: 16px;\n                border-collapse: collapse;\n                width: 50%;\n            }\n        </style>\n    </head>\n    <body>\n        <h3 align=\"center\"> Data from db2 database using db2 connector</label>\n        <br/>\n        <br/>\n        <table align=\"center\">      \n            <thead>\n                <tr>\n                    <th>Job</th>\n                    <th>Count</th>\n                </tr>\n            </thead>\n            <tbody>\n                 {{#payload}}\n                    <tr>\n                        <td>{{JOB}}</td>\n                        <td>{{count}}</td>\n                    </tr>\n                 {{/payload}}\n            </tbody>\n        </table>\n    </body>\n</html>\n",
+        "x": 617,
+        "y": 418,
+        "wires": [
+            [
+                "7b6a0dc2.d12aac"
+            ]
+        ]
+    },
+    {
+        "id": "3f25a624.fc5d32",
+        "type": "http in",
+        "z": "94ee46c3.537018",
+        "name": "",
+        "url": "/db2",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 87.5,
+        "y": 92,
+        "wires": [
+            [
+                "52751063.e48598"
+            ]
+        ]
+    },
+    {
+        "id": "7b6a0dc2.d12aac",
+        "type": "http response",
+        "z": "94ee46c3.537018",
+        "name": "db2",
+        "x": 728.5,
+        "y": 470,
+        "wires": []
+    },
+    {
+        "id": "2adddd08.5e72f2",
+        "type": "inject",
+        "z": "94ee46c3.537018",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 100.5,
+        "y": 207,
+        "wires": [
+            [
+                "52751063.e48598"
+            ]
+        ]
+    },
+    {
+        "id": "cf5fe8ab.03f458",
+        "type": "debug",
+        "z": "94ee46c3.537018",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 503.5,
+        "y": 183,
+        "wires": []
+    },
+    {
+        "id": "7e49fb92.91523c",
+        "type": "Aggregation",
+        "z": "94ee46c3.537018",
+        "name": "",
+        "groupByColumn": "JOB",
+        "operation": "count",
+        "operationOn": "EMPNO",
+        "x": 559,
+        "y": 359,
+        "wires": [
+            [
+                "e0fb10c9.e7156"
+            ]
+        ]
+    },
+    {
+        "id": "bb8e6345.e780c8",
+        "type": "function",
+        "z": "aa9abc86.f00858",
+        "name": "get auth token",
+        "func": "var token = msg.req.headers[\"auth-token\"];\nif (token) {\n    msg.token = token;\n    var prj = msg.req.query.project;\n    if (prj) {\n        if (prj == 'IAM') {\n            return [null, msg, null];\n        } else if (prj == 'ECC') {\n            return [msg, null, null];\n        } else {\n         msg.payload.message = 'please ensure project name is correct'\n            return [null, null, msg];\n        }\n    } else {\n         msg.payload.message = 'project is mandatory'\n        return [null, null, msg];\n    }\n} else {\n    msg.payload.message = 'token is mandatory'\n    return [null, null, msg];\n}",
+        "outputs": "3",
+        "noerr": 0,
+        "x": 340,
+        "y": 200,
+        "wires": [
+            [
+                "cc6e2328.c8fda"
+            ],
+            [
+                "ae98d2c5.2a4dc8"
+            ],
+            [
+                "e4758b08.3b4168"
+            ]
+        ]
+    },
+    {
+        "id": "cc6e2328.c8fda",
+        "type": "JsonWebToken",
+        "z": "aa9abc86.f00858",
+        "name": "validate token",
+        "tokenconfig": "116d155c.81522b",
+        "x": 580,
+        "y": 140,
+        "wires": [
+            [
+                "e4758b08.3b4168"
+            ]
+        ]
+    },
+    {
+        "id": "e4758b08.3b4168",
+        "type": "function",
+        "z": "aa9abc86.f00858",
+        "name": "validate token",
+        "func": "if(msg.error){\n    msg.payload = msg.error;\n    return [ null, msg ];\n }else{\n     if(typeof(msg.token) == \"object\"){\n                    return [ msg, null ];\n     }else{\n           return [ null, msg ];\n     }\n }\n \n",
+        "outputs": "2",
+        "noerr": 0,
+        "x": 840,
+        "y": 220,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ae98d2c5.2a4dc8",
+        "type": "JsonWebToken",
+        "z": "aa9abc86.f00858",
+        "name": "validate token",
+        "tokenconfig": "7d1bc4de.62b944",
+        "x": 580,
+        "y": 180,
+        "wires": [
+            [
+                "e4758b08.3b4168"
+            ]
+        ]
+    },
+    {
+        "id": "3b4c1703.b1b09",
+        "type": "subflow:aa9abc86.f00858",
+        "z": "fd2c3483.8380a8",
+        "name": "",
+        "x": 253,
+        "y": 94,
+        "wires": [
+            [
+                "1e5239eb.4e59e6"
+            ],
+            [
+                "1e5239eb.4e59e6"
+            ]
+        ]
+    },
+    {
+        "id": "20b2da9e.761ac6",
+        "type": "http in",
+        "z": "fd2c3483.8380a8",
+        "name": "validateKey",
+        "url": "/validateKey",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 75,
+        "y": 149,
+        "wires": [
+            [
+                "3b4c1703.b1b09"
+            ]
+        ]
+    },
+    {
+        "id": "68468a09.3177bc",
+        "type": "http response",
+        "z": "fd2c3483.8380a8",
+        "name": "",
+        "x": 658,
+        "y": 133,
+        "wires": []
+    },
+    {
+        "id": "cb44ab08.48f8a8",
+        "type": "http in",
+        "z": "fd2c3483.8380a8",
+        "name": "generateKey",
+        "url": "/generateKey",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 75,
+        "y": 269,
+        "wires": [
+            [
+                "4f3756ec.1bc73"
+            ]
+        ]
+    },
+    {
+        "id": "5e6ac0b9.80cb3",
+        "type": "function",
+        "z": "fd2c3483.8380a8",
+        "name": "pass token",
+        "func": "msg.payload = msg.token\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 755,
+        "y": 269,
+        "wires": [
+            [
+                "17d8b986.6a9e1e"
+            ]
+        ]
+    },
+    {
+        "id": "17d8b986.6a9e1e",
+        "type": "http response",
+        "z": "fd2c3483.8380a8",
+        "name": "",
+        "x": 750,
+        "y": 359,
+        "wires": []
+    },
+    {
+        "id": "4f3756ec.1bc73",
+        "type": "function",
+        "z": "fd2c3483.8380a8",
+        "name": "get body object",
+        "func": "var params = msg.req.body;\nif(params.project){\n   \n       msg.payload  =params;\n       if(params.project == 'ECC'){\n               return [null, msg, null];  \n       }else if(params.project == 'IAM'){\n            return [null, null, msg]; \n       }else{\n            msg.payload = 'Please ensure project is correct.';\n       return [msg, null, null];\n       }\n   \n}else{\n    msg.payload  = 'user and passcode are mandatory.';\n    return [msg, null, null];\n}\n\n\n\n\n",
+        "outputs": "3",
+        "noerr": 0,
+        "x": 265,
+        "y": 269,
+        "wires": [
+            [
+                "5ed770e3.fc6c4"
+            ],
+            [
+                "f4507ccb.616818"
+            ],
+            [
+                "3ac83008.b7a2"
+            ]
+        ]
+    },
+    {
+        "id": "f4507ccb.616818",
+        "type": "JsonWebToken",
+        "z": "fd2c3483.8380a8",
+        "name": "generate token",
+        "tokenconfig": "116d155c.81522b",
+        "x": 505,
+        "y": 269,
+        "wires": [
+            [
+                "5e6ac0b9.80cb3"
+            ]
+        ]
+    },
+    {
+        "id": "3ac83008.b7a2",
+        "type": "JsonWebToken",
+        "z": "fd2c3483.8380a8",
+        "name": "generate token",
+        "tokenconfig": "7d1bc4de.62b944",
+        "x": 505,
+        "y": 309,
+        "wires": [
+            [
+                "5e6ac0b9.80cb3"
+            ]
+        ]
+    },
+    {
+        "id": "5ed770e3.fc6c4",
+        "type": "http response",
+        "z": "fd2c3483.8380a8",
+        "name": "",
+        "x": 475,
+        "y": 209,
+        "wires": []
+    },
+    {
+        "id": "1e5239eb.4e59e6",
+        "type": "function",
+        "z": "fd2c3483.8380a8",
+        "name": "",
+        "func": "if(msg.payload && msg.payload.project){\n  msg.payload = 'This is a valid token'  \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 518,
+        "y": 86,
+        "wires": [
+            [
+                "68468a09.3177bc"
+            ]
+        ]
+    },
+    {
+        "id": "1948eaa0.c9aedd",
+        "type": "function",
+        "z": "8aa64e82.c2d6f",
+        "name": "get auth token",
+        "func": "var token = msg.req.headers[\"auth-token\"];\nif (token) {\n    msg.token = token;\n    var prj = msg.req.query.project;\n    if (prj) {\n        if (prj == 'IAM') {\n            return [null, msg, null];\n        } else if (prj == 'ECC') {\n            return [msg, null, null];\n        } else {\n         msg.payload.message = 'please ensure project name is correct'\n            return [null, null, msg];\n        }\n    } else {\n         msg.payload.message = 'project is mandatory'\n        return [null, null, msg];\n    }\n} else {\n    msg.payload.message = 'token is mandatory'\n    return [null, null, msg];\n}",
+        "outputs": "3",
+        "noerr": 0,
+        "x": 340,
+        "y": 200,
+        "wires": [
+            [
+                "ca8fd95a.3ee01"
+            ],
+            [
+                "cb452a45.fe6f58"
+            ],
+            [
+                "c0ab32a5.f080e8"
+            ]
+        ]
+    },
+    {
+        "id": "ca8fd95a.3ee01",
+        "type": "JsonWebToken",
+        "z": "8aa64e82.c2d6f",
+        "name": "validate token",
+        "tokenconfig": "9ee5d6f0.452968",
+        "x": 580,
+        "y": 140,
+        "wires": [
+            [
+                "c0ab32a5.f080e8"
+            ]
+        ]
+    },
+    {
+        "id": "c0ab32a5.f080e8",
+        "type": "function",
+        "z": "8aa64e82.c2d6f",
+        "name": "validate token",
+        "func": "if(msg.error){\n    msg.payload = msg.error;\n    return [ null, msg ];\n }else{\n     if(typeof(msg.token) == \"object\"){\n                    return [ msg, null ];\n     }else{\n           return [ null, msg ];\n     }\n }\n \n",
+        "outputs": "2",
+        "noerr": 0,
+        "x": 840,
+        "y": 220,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "cb452a45.fe6f58",
+        "type": "JsonWebToken",
+        "z": "8aa64e82.c2d6f",
+        "name": "validate token",
+        "tokenconfig": "34c11880.fc4d58",
+        "x": 580,
+        "y": 180,
+        "wires": [
+            [
+                "c0ab32a5.f080e8"
+            ]
+        ]
+    },
+    {
+        "id": "a0b49460.930b3",
+        "type": "http in",
+        "z": "1cdb46ce.173239",
+        "name": "TestAPI",
+        "url": "/testAPI123",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 107,
+        "y": 57,
+        "wires": [
+            [
+                "290389aa.7070b6"
+            ]
+        ]
+    },
+    {
+        "id": "729ee662.80a84",
+        "type": "function",
+        "z": "1cdb46ce.173239",
+        "name": "MySQL Query ",
+        "func": "msg.topic=\"select * from iamdb.test where id=\"+msg.payload.userid+\" limit 1;\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 401,
+        "y": 75,
+        "wires": [
+            [
+                "ed5891ef.0c63a"
+            ]
+        ]
+    },
+    {
+        "id": "c1aa9c10.d30b1",
+        "type": "file in",
+        "z": "1cdb46ce.173239",
+        "name": "CSV file",
+        "filename": "/home/aravindhana/QA/ResourceAllocation.csv",
+        "format": "utf8",
+        "x": 431.99993896484375,
+        "y": 326,
+        "wires": [
+            [
+                "9f8a6fdf.0c7fa8"
+            ]
+        ]
+    },
+    {
+        "id": "9f8a6fdf.0c7fa8",
+        "type": "csv",
+        "z": "1cdb46ce.173239",
+        "name": "Read csv file ",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "EmpID,ProjectName,ProductOrServices,Billable",
+        "x": 523.4999694824219,
+        "y": 401,
+        "wires": [
+            [
+                "2b103d3b.aec05a"
+            ]
+        ]
+    },
+    {
+        "id": "d8258657.4ceb6",
+        "type": "json",
+        "z": "1cdb46ce.173239",
+        "name": "Convert to Json",
+        "x": 705,
+        "y": 288,
+        "wires": [
+            [
+                "143049f9.6e8326",
+                "8cec36a2.7241"
+            ]
+        ]
+    },
+    {
+        "id": "2b103d3b.aec05a",
+        "type": "json",
+        "z": "1cdb46ce.173239",
+        "name": "Convert to Json",
+        "x": 615,
+        "y": 467,
+        "wires": [
+            [
+                "8985a031.6dfb9",
+                "8cec36a2.7241"
+            ]
+        ]
+    },
+    {
+        "id": "676b6152.0b538",
+        "type": "function",
+        "z": "1cdb46ce.173239",
+        "name": "flow name",
+        "func": "msg.topic=\"File\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 356,
+        "y": 238,
+        "wires": [
+            [
+                "c1aa9c10.d30b1"
+            ]
+        ]
+    },
+    {
+        "id": "dc920ee6.0bfdb8",
+        "type": "function",
+        "z": "1cdb46ce.173239",
+        "name": "Flow Name",
+        "func": "msg.topic=\"DB\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 603,
+        "y": 217,
+        "wires": [
+            [
+                "d8258657.4ceb6"
+            ]
+        ]
+    },
+    {
+        "id": "24b7d431.106164",
+        "type": "http response",
+        "z": "1cdb46ce.173239",
+        "name": "valid response",
+        "x": 793,
+        "y": 518,
+        "wires": []
+    },
+    {
+        "id": "1ea0bbcd.2fa584",
+        "type": "http response",
+        "z": "1cdb46ce.173239",
+        "name": "Invalid Token",
+        "x": 204,
+        "y": 281,
+        "wires": []
+    },
+    {
+        "id": "ed5891ef.0c63a",
+        "type": "mysql",
+        "z": "1cdb46ce.173239",
+        "mydb": "b608389.81ad8c8",
+        "name": "",
+        "x": 533,
+        "y": 140,
+        "wires": [
+            [
+                "dc920ee6.0bfdb8"
+            ]
+        ]
+    },
+    {
+        "id": "71702f9.0522a5",
+        "type": "inject",
+        "z": "1cdb46ce.173239",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 122,
+        "y": 212,
+        "wires": [
+            [
+                "729ee662.80a84",
+                "676b6152.0b538"
+            ]
+        ]
+    },
+    {
+        "id": "143049f9.6e8326",
+        "type": "debug",
+        "z": "1cdb46ce.173239",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 701,
+        "y": 117,
+        "wires": []
+    },
+    {
+        "id": "8985a031.6dfb9",
+        "type": "debug",
+        "z": "1cdb46ce.173239",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 830,
+        "y": 212,
+        "wires": []
+    },
+    {
+        "id": "75d83917.2124a",
+        "type": "debug",
+        "z": "1cdb46ce.173239",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 982,
+        "y": 334,
+        "wires": []
+    },
+    {
+        "id": "8cec36a2.7241",
+        "type": "JoinJson",
+        "z": "1cdb46ce.173239",
+        "flow1": "DB",
+        "flow2": "File",
+        "id1": "id",
+        "id2": "EmpID",
+        "x": 810,
+        "y": 380,
+        "wires": [
+            [
+                "75d83917.2124a",
+                "24b7d431.106164"
+            ]
+        ]
+    },
+    {
+        "id": "a399a8ba.2f516",
+        "type": "sentiment",
+        "z": "90f4b8be.83cce",
+        "name": "",
+        "x": 348.54541015625,
+        "y": 78,
+        "wires": [
+            [
+                "fd53846e.369ab"
+            ]
+        ]
+    },
+    {
+        "id": "417cfbe7.d5384c",
+        "type": "http in",
+        "z": "90f4b8be.83cce",
+        "name": "",
+        "url": "/twitterfeed",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 85,
+        "y": 256.09090423583984,
+        "wires": [
+            [
+                "cf1f6304.812828"
+            ]
+        ]
+    },
+    {
+        "id": "ca463e81.7623c",
+        "type": "mongodb in",
+        "z": "90f4b8be.83cce",
+        "mongodb": "79137e5a.d2e028",
+        "name": "Tweets storage",
+        "collection": "tw",
+        "operation": "find",
+        "x": 532.227294921875,
+        "y": 255.09093475341797,
+        "wires": [
+            [
+                "7b0763d8.e5c504"
+            ]
+        ]
+    },
+    {
+        "id": "7b0763d8.e5c504",
+        "type": "template",
+        "z": "90f4b8be.83cce",
+        "name": "Tweets prettify",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<html>\n    <head>\n        <style>\n            body{\n                text-align: center;\n            }\n            ul{\n                text-align: left;\n                margin:auto;\n                width: 500px;\n                list-style-type:none;\n            }\n            li{\n                border: 1px solid #999;\n                border-left-width:10px;\n                border-radius:3px;\n                margin-bottom:20px;\n                padding: 10px;\n            }\n            li.sentiment_positive{\n                border-left: 10px solid #69B369;\n            }\n            li.sentiment_negative{\n                border-left: 10px solid #E64444;\n            }\n            .tweet{\n                display: inline-block;\n                font-family: Verdana;\n                width: 380px;\n                margin-left: 10px;\n            }\n            img{\n                width:48px;\n                height:48px;\n                border-radius: 5px;\n                vertical-align: top;\n            }\n        </style>\n    </head>\n    <body>\n        <ul>\n            {{#payload}}\n                <li class=\"sentiment_{{sentiment.text}}\">\n                    <img src = \"{{tweet.user.profile_image_url}}\">\n                    <div class=\"tweet\">\n                        <div class=\"user\">\n                            <b>{{tweet.user.name}}</b>\n                        </div>\n                        <div class=\"text\">\n                            {{tweet.text}}\n                        </div>\n                    </div>\n                </li>\n            {{/payload}}\n        </ul>\n    </body>\n</html>\n",
+        "x": 717.5,
+        "y": 255.6363754272461,
+        "wires": [
+            [
+                "753dc8e1.2d7b8"
+            ]
+        ]
+    },
+    {
+        "id": "753dc8e1.2d7b8",
+        "type": "http response",
+        "z": "90f4b8be.83cce",
+        "name": "Tweets on webpage",
+        "x": 973.0453491210938,
+        "y": 276.3636703491211,
+        "wires": []
+    },
+    {
+        "id": "16d92194.d94016",
+        "type": "twitter in",
+        "z": "90f4b8be.83cce",
+        "twitter": "b2084e1f.c0b98",
+        "tags": "#IoT",
+        "user": "false",
+        "name": "Tweets",
+        "topic": "tweets",
+        "inputs": 1,
+        "x": 216.54544067382812,
+        "y": 85.3636474609375,
+        "wires": [
+            [
+                "a399a8ba.2f516"
+            ]
+        ]
+    },
+    {
+        "id": "10efaf8a.1efe08",
+        "type": "mongodb out",
+        "z": "90f4b8be.83cce",
+        "mongodb": "d2359cd1.500a28",
+        "name": "Tweets storage",
+        "collection": "tw",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 738.54541015625,
+        "y": 77.81819915771484,
+        "wires": []
+    },
+    {
+        "id": "cf1f6304.812828",
+        "type": "function",
+        "z": "90f4b8be.83cce",
+        "name": "Restricts number of tweets",
+        "func": "msg.limit = 10;\nmsg.skip = 0;\nmsg.sort = {'tweet.id':-1};\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 307.86366271972656,
+        "y": 256.6364059448242,
+        "wires": [
+            [
+                "ca463e81.7623c"
+            ]
+        ]
+    },
+    {
+        "id": "fd53846e.369ab",
+        "type": "function",
+        "z": "90f4b8be.83cce",
+        "name": "Evaluate sentiment",
+        "func": "if(msg.sentiment.score > 0){\n    msg.sentiment.text = \"positive\";\n}\nelse if(msg.sentiment.score < 0){\n    msg.sentiment.text = \"negative\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 529.272705078125,
+        "y": 77.90911102294922,
+        "wires": [
+            [
+                "10efaf8a.1efe08"
+            ]
+        ]
+    },
+    {
+        "id": "ac5272a3.d10d78",
+        "type": "inject",
+        "z": "90f4b8be.83cce",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "x": 79,
+        "y": 168.6363754272461,
+        "wires": [
+            [
+                "66dd52ca.2010ac"
+            ]
+        ]
+    },
+    {
+        "id": "66dd52ca.2010ac",
+        "type": "function",
+        "z": "90f4b8be.83cce",
+        "name": "Query to remove",
+        "func": "var newMsg = {};\nnewMsg.operation  = 'removeMany';\nnewMsg.payload = {};\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 243.5,
+        "y": 168.6363754272461,
+        "wires": [
+            [
+                "d6701557.d13278"
+            ]
+        ]
+    },
+    {
+        "id": "1a538b6a.264115",
+        "type": "debug",
+        "z": "90f4b8be.83cce",
+        "name": "Tweet payload",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 667,
+        "y": 179.6363754272461,
+        "wires": []
+    },
+    {
+        "id": "3c22e429.7d53dc",
+        "type": "inject",
+        "z": "90f4b8be.83cce",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 82,
+        "y": 84.81819915771484,
+        "wires": [
+            [
+                "16d92194.d94016"
+            ]
+        ]
+    },
+    {
+        "id": "d6701557.d13278",
+        "type": "mongodb2 in",
+        "z": "90f4b8be.83cce",
+        "service": "_ext_",
+        "configNode": "4daa69b5.d7f8c",
+        "name": "",
+        "collection": "tw",
+        "operation": "",
+        "x": 448,
+        "y": 168.81819915771484,
+        "wires": [
+            [
+                "1a538b6a.264115"
+            ]
+        ]
+    },
+    {
+        "id": "e9636dcf.990238",
+        "type": "inject",
+        "z": "87d96348.4f92b8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 99,
+        "y": 68,
+        "wires": [
+            [
+                "8ae0e1b9.7f32f8",
+                "a59f600.7d88f2"
+            ]
+        ]
+    },
+    {
+        "id": "290389aa.7070b6",
+        "type": "subflow:aa9abc86.f00858",
+        "z": "1cdb46ce.173239",
+        "x": 213,
+        "y": 157,
+        "wires": [
+            [
+                "729ee662.80a84",
+                "676b6152.0b538"
+            ],
+            [
+                "1ea0bbcd.2fa584"
+            ]
+        ]
+    },
+    {
+        "id": "87dc3789.79ed98",
+        "type": "inject",
+        "z": "413fba5f.73a724",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "x": 90,
+        "y": 154,
+        "wires": [
+            [
+                "6bf6aebf.2028c",
+                "1c744606.2fec8a",
+                "3f4e441a.30197c"
+            ]
+        ]
+    },
+    {
+        "id": "52890275.cca18c",
+        "type": "ui_chart",
+        "z": "413fba5f.73a724",
+        "name": "Average Load Per Ship",
+        "group": "87b781ae.606fb",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "label": "",
+        "chartType": "horizontalBar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "x": 593,
+        "y": 82,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6bf6aebf.2028c",
+        "type": "http request",
+        "z": "413fba5f.73a724",
+        "name": "ShipLoad",
+        "method": "GET",
+        "ret": "obj",
+        "url": "http://ecc.smartbothub.com:9000/ONG/ShipLoad",
+        "tls": "",
+        "x": 325,
+        "y": 83,
+        "wires": [
+            [
+                "52890275.cca18c"
+            ]
+        ]
+    },
+    {
+        "id": "1c744606.2fec8a",
+        "type": "http request",
+        "z": "413fba5f.73a724",
+        "name": "TransitTime",
+        "method": "GET",
+        "ret": "obj",
+        "url": "http://ecc.smartbothub.com:9000/ONG/transittime",
+        "tls": "",
+        "x": 329,
+        "y": 153,
+        "wires": [
+            [
+                "67fb7f70.14c8c"
+            ]
+        ]
+    },
+    {
+        "id": "67fb7f70.14c8c",
+        "type": "ui_chart",
+        "z": "413fba5f.73a724",
+        "name": "Average Transit Time",
+        "group": "e602e887.546278",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "label": "",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "x": 590,
+        "y": 152,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "3f4e441a.30197c",
+        "type": "http request",
+        "z": "413fba5f.73a724",
+        "name": "Ship Services",
+        "method": "GET",
+        "ret": "obj",
+        "url": "http://ecc.smartbothub.com:9000/ONG/shipservicehrs",
+        "tls": "",
+        "x": 339,
+        "y": 226,
+        "wires": [
+            [
+                "680038d9.d4b088"
+            ]
+        ]
+    },
+    {
+        "id": "680038d9.d4b088",
+        "type": "function",
+        "z": "413fba5f.73a724",
+        "name": "",
+        "func": "var data  = msg.payload;\nvar datapay = [];\nfor (var i = 0; i < data.length; i++){\n    var color = \"green\";\n    if (data[i].Consumed_service_hours < (40 / 100) * data[i].Total_Hours){color = color;}\n    if (data[i].Consumed_service_hours >= (90 / 100) * data[i].Total_Hours){color = \"red\";}\n    if ((data[i].Consumed_service_hours > (40 / 100) * data[i].Total_Hours) && (data[i].Consumed_service_hours < (90 / 100) * data[i].Total_Hours)){color=\"orange\";}\n    datapay.push({\n        'Ship_Id' : data[i].Ship_Id,\n        'Total_Hours' : data[i].Total_Hours,\n        'Consumed_service_hours' : data[i].Consumed_service_hours,\n        'Hour_Left' :data[i].Hour_Left,\n        'Ship_Color' : color\n    })\n}\nmsg.payload = datapay;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 509,
+        "y": 257,
+        "wires": [
+            [
+                "58d6e1dc.8cffe"
+            ]
+        ]
+    },
+    {
+        "id": "58d6e1dc.8cffe",
+        "type": "ui_template",
+        "z": "413fba5f.73a724",
+        "group": "87b781ae.606fb",
+        "name": "Operation Status",
+        "order": 0,
+        "width": "10",
+        "height": "10",
+        "format": "<style>\n    .red{\n    height: 10px;\n    width: 10px;\n    background: red;\n    border-radius: 100%;\n    vertical-align: middle;\n    margin-left: 20%;\n    }\n    .green{\n    height: 10px;\n    width: 10px;\n    background: green;\n    border-radius: 100%;\n    vertical-align: middle;\n    margin-left: 20%;\n    }\n    .orange{\n    height: 10px;\n    width: 10px;\n    background: #FFA500;\n    border-radius: 100%;\n    vertical-align: middle;\n    margin-left: 20%;\n    }\n</style>\n<div>\n    <div style=\"padding: 7px 0px 26px 0px;\">\n<p style=\"font-weight: bold;text-align: center; margin-top: 2%;\"> Operation Status </p>\n</div>\n<table class=\"table table-bordered text-center\" style=\"border: 1px solid lightgray;border-collapse: collapse;font-size:13px;\">\n   <thead>\n      <tr style=\"text-align:left;vertical-align: top;border: 1px solid lightgray;border-collapse: collapse;\">\n         <th flex style=\"border: 1px solid lightgray;border-collapse: collapse;padding:5px;\">Ship Id</th>\n         <th flex style=\"border: 1px solid lightgray;border-collapse: collapse;padding:5px;\">Total Hours</th>\n         <th flex style=\"border: 1px solid lightgray;border-collapse: collapse;padding:5px;\">Service hours</th>\n         <th flex style=\"border: 1px solid lightgray;border-collapse: collapse;padding:5px;\">Service hours Remaining</th>\n         <th flex style=\"border: 1px solid lightgray;border-collapse: collapse;padding:5px;\">Operation Status</th>\n      </tr>\n   </thead>\n   <tbody>\n      <tr ng-repeat=\"data in msg.payload\" style=\"border: 1px solid lightgray;border-collapse: collapse;\">\n         <td flex style=\"border: 1px solid lightgray;border-collapse: collapse;padding:5px;\">{{data.Ship_Id}}</td>\n         <td flex style=\"border: 1px solid lightgray;border-collapse: collapse;padding:5px;\">{{data.Total_Hours}}</td>\n         <td flex style=\"border: 1px solid lightgray;border-collapse: collapse;padding:5px;\">{{data.Consumed_service_hours}}</td>\n         <td flex style=\"border: 1px solid lightgray;border-collapse: collapse;padding:5px;\">{{data.Hour_Left}}</td>\n         <td flex style=\"border: 1px solid lightgray;border-collapse: collapse;padding:5px;\">\n             <div class={{data.Ship_Color}}></div>\n         </td>\n      </tr>\n   </tbody>\n</table>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "x": 681,
+        "y": 228,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8a6f9b1f.934ed8",
+        "type": "file in",
+        "z": "ab873e7e.ac17a8",
+        "name": "CSV file",
+        "filename": "/home/eccusr/Wrk/incoming/Load_by_Ship.csv",
+        "format": "utf8",
+        "x": 496,
+        "y": 52,
+        "wires": [
+            [
+                "204c5e5e.d6c992"
+            ]
+        ]
+    },
+    {
+        "id": "204c5e5e.d6c992",
+        "type": "csv",
+        "z": "ab873e7e.ac17a8",
+        "name": "Read csv file ",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "ship,month,load carried,Fleet",
+        "x": 550.5,
+        "y": 108,
+        "wires": [
+            [
+                "2400002c.b6913"
+            ]
+        ]
+    },
+    {
+        "id": "53fb797f.5ed888",
+        "type": "inject",
+        "z": "ab873e7e.ac17a8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 130,
+        "y": 150,
+        "wires": [
+            [
+                "c706d0cf.675cb8"
+            ]
+        ]
+    },
+    {
+        "id": "70ab8c6b.736cf4",
+        "type": "file",
+        "z": "87d96348.4f92b8",
+        "name": "output",
+        "filename": "/home/aravindhana/QA/Salesoutput.txt",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "x": 760,
+        "y": 96,
+        "wires": []
+    },
+    {
+        "id": "b87b85bc.1134d8",
+        "type": "file in",
+        "z": "917dcb61.2e64b",
+        "name": "CSV file",
+        "filename": "/home/aravindhana/QA/ResourceAllocation.csv",
+        "format": "utf8",
+        "x": 329.9999237060547,
+        "y": 224,
+        "wires": [
+            [
+                "bd839050.f7c27"
+            ]
+        ]
+    },
+    {
+        "id": "bd839050.f7c27",
+        "type": "csv",
+        "z": "917dcb61.2e64b",
+        "name": "Read csv file ",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "EmpID,ProjectName,ProductOrServices,Billable",
+        "x": 458.4999542236328,
+        "y": 332,
+        "wires": [
+            [
+                "b058999d.edacd"
+            ]
+        ]
+    },
+    {
+        "id": "b058999d.edacd",
+        "type": "json",
+        "z": "917dcb61.2e64b",
+        "name": "Convert to Json",
+        "x": 676.9999847412109,
+        "y": 242,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c8cd04e8.2f0178",
+        "type": "function",
+        "z": "917dcb61.2e64b",
+        "name": "flow name",
+        "func": "msg.topic=\"File\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 117,
+        "y": 310,
+        "wires": [
+            [
+                "b87b85bc.1134d8"
+            ]
+        ]
+    },
+    {
+        "id": "69dcb84d.16fa58",
+        "type": "function",
+        "z": "a471b0a6.07b948",
+        "name": "Query to Get the data from MySQL",
+        "func": "msg.topic=\"select * from iamdb.test where id<=500;\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 224,
+        "y": 33,
+        "wires": [
+            [
+                "12bab26d.8ded96"
+            ]
+        ]
+    },
+    {
+        "id": "12bab26d.8ded96",
+        "type": "mysql",
+        "z": "a471b0a6.07b948",
+        "mydb": "310132bc.797f5e",
+        "name": "MySQL HRMS DB",
+        "x": 502,
+        "y": 62,
+        "wires": [
+            [
+                "8e899dd1.abd2f8"
+            ]
+        ]
+    },
+    {
+        "id": "4c69ee16.6f37c",
+        "type": "json",
+        "z": "a471b0a6.07b948",
+        "name": "Convert to Json",
+        "x": 703,
+        "y": 124,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8e899dd1.abd2f8",
+        "type": "function",
+        "z": "a471b0a6.07b948",
+        "name": "Flow Name",
+        "func": "msg.topic=\"DB\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 741,
+        "y": 41,
+        "wires": [
+            [
+                "4c69ee16.6f37c"
+            ]
+        ]
+    },
+    {
+        "id": "474f0fe3.3276f",
+        "type": "function",
+        "z": "e43bb8d.d5acc48",
+        "name": "Inner join",
+        "func": "context.data = context.data || new Object();\nswitch (msg.topic) {\n    case \"DB\":\n        context.data.task1 = msg.payload;\n      //  msg = null;\n        break;\n    case \"File\":\n        context.data.task2 = msg.payload;\n      //  msg = null;\n        break;\n    default:\n      //  msg = null;\n    \tbreak;\n\n}\n\n\n\nif(context.data.task1 != null && context.data.task2 != null) {\n    var task1 = JSON.parse(context.data.task1),\n     task2 = JSON.parse(context.data.task2),\n     task1Keys = Object.keys(task1[0]),\n     task2Keys = Object.keys(task2[0]),\n     tempArray =[];\n\n\tfor(var i=0; i< task1.length; i++ ){\n\t  \tfor(var j=0; j< task2.length; j++ ){\n\t  \t    if(task1[i].id == task2[j].EmpID){\n\t  \t      \tvar obj = {};\n\t  \t      obj = addKeys(obj, task1Keys, task1[i]);\n\t  \t        obj = addKeys(obj, task2Keys, task2[j]);\n\t  \t         tempArray.push(obj);\n\t  \t    }\n\t        }  \n\t}\n\t\n\tfunction addKeys(obj, keys, item){\n\t    for(var k=0; k< keys.length; k++){\n\t        obj[keys[k]] = item[keys[k]];\n \t    }\n \t    return obj;\n\t}\n//\tvar msg2= new Object();\n    msg.payload = tempArray;\n    context.data=null;\n\treturn msg;\n\t\n\n\n} \n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 525.000129699707,
+        "y": 181.34378337860107,
+        "wires": [
+            [
+                "47118f8b.38229"
+            ]
+        ]
+    },
+    {
+        "id": "62ab5186.8ccab8",
+        "type": "chart response",
+        "z": "e43bb8d.d5acc48",
+        "x": 791.5055541992188,
+        "y": 326.380765914917,
+        "wires": []
+    },
+    {
+        "id": "47118f8b.38229",
+        "type": "Filter",
+        "z": "e43bb8d.d5acc48",
+        "name": "Filter data",
+        "ConditionColumn": "Billable",
+        "operator": "==",
+        "ConditionValue": "Y",
+        "x": 730.6791381835938,
+        "y": 79,
+        "wires": [
+            [
+                "60eef273.815ffc"
+            ]
+        ]
+    },
+    {
+        "id": "b820b5cb.d59598",
+        "type": "chart request",
+        "z": "e43bb8d.d5acc48",
+        "charttype": "ColumnChart",
+        "path": "/ProjectwiseBillableCnt",
+        "refresh": "120",
+        "formatx": "",
+        "formaty": "",
+        "attribs": [
+            {
+                "name": "ProjectName",
+                "type": "string"
+            },
+            {
+                "name": "count",
+                "type": "number"
+            }
+        ],
+        "x": 85,
+        "y": 181.3437786102295,
+        "wires": [
+            [
+                "199efe70.cb74ea",
+                "28fbe827.b9b518"
+            ]
+        ]
+    },
+    {
+        "id": "199efe70.cb74ea",
+        "type": "subflow:a471b0a6.07b948",
+        "z": "e43bb8d.d5acc48",
+        "name": "Get Data From MySQL",
+        "x": 303.49999237060547,
+        "y": 109.84378051757812,
+        "wires": [
+            [
+                "474f0fe3.3276f"
+            ]
+        ]
+    },
+    {
+        "id": "28fbe827.b9b518",
+        "type": "subflow:917dcb61.2e64b",
+        "z": "e43bb8d.d5acc48",
+        "name": "Get Data From CSV",
+        "x": 263,
+        "y": 266.3437786102295,
+        "wires": [
+            [
+                "474f0fe3.3276f"
+            ]
+        ]
+    },
+    {
+        "id": "60eef273.815ffc",
+        "type": "Aggregation",
+        "z": "e43bb8d.d5acc48",
+        "name": "Group by & Count ",
+        "groupByColumn": "ProjectName",
+        "operation": "count",
+        "operationOn": "id",
+        "x": 890,
+        "y": 221,
+        "wires": [
+            [
+                "62ab5186.8ccab8",
+                "baff4609.7c3db8"
+            ]
+        ]
+    },
+    {
+        "id": "baff4609.7c3db8",
+        "type": "debug",
+        "z": "e43bb8d.d5acc48",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 1067,
+        "y": 274,
+        "wires": []
+    },
+    {
+        "id": "31ab7a6e.e9a5ce",
+        "type": "inject",
+        "z": "e43bb8d.d5acc48",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 84,
+        "y": 240,
+        "wires": [
+            [
+                "199efe70.cb74ea",
+                "28fbe827.b9b518"
+            ]
+        ]
+    },
+    {
+        "id": "92af4e5b.77fa6",
+        "type": "mysql",
+        "z": "1bf518ec.1a9847",
+        "mydb": "5a4da1ee.4f9ad8",
+        "name": "Logs storage",
+        "x": 462,
+        "y": 137,
+        "wires": [
+            [
+                "6bb5ad85.2e1494"
+            ]
+        ]
+    },
+    {
+        "id": "36f093ef.4d129c",
+        "type": "http in",
+        "z": "1bf518ec.1a9847",
+        "name": "",
+        "url": "/dataconsume",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 115,
+        "y": 138,
+        "wires": [
+            [
+                "50ad29c.2940bd8"
+            ]
+        ]
+    },
+    {
+        "id": "6bb5ad85.2e1494",
+        "type": "http response",
+        "z": "1bf518ec.1a9847",
+        "name": "Consumption details",
+        "x": 660,
+        "y": 138,
+        "wires": []
+    },
+    {
+        "id": "50ad29c.2940bd8",
+        "type": "function",
+        "z": "1bf518ec.1a9847",
+        "name": "select query",
+        "func": "//msg.topic = \"select date_format(started_at, '%m/%d/%Y' ) as Date, (SUM(response_size) + SUM(request_size)) as 'Data consumption' from konglogs where api_name = '\"+ msg.payload.apiname +\"' and started_at between '\"+ msg.payload.startdate +\"' and '\"+ msg.payload.enddate +\"' group by Date ;\";\nmsg.topic = \"select date_format(started_at, '%m/%d/%Y' ) as Date, (SUM(response_size) + SUM(request_size)) as 'Data consumption' from konglogs where started_at between '\"+ msg.payload.startdate +\"' and '\"+ msg.payload.enddate +\"' group by Date ;\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 309,
+        "y": 137,
+        "wires": [
+            [
+                "92af4e5b.77fa6"
+            ]
+        ]
+    },
+    {
+        "id": "146c1511.2f90cb",
+        "type": "mysql",
+        "z": "1bf518ec.1a9847",
+        "mydb": "5a4da1ee.4f9ad8",
+        "name": "Logs storage",
+        "x": 448,
+        "y": 242,
+        "wires": [
+            [
+                "a310c4fb.1f96c8"
+            ]
+        ]
+    },
+    {
+        "id": "3540df3f.b8134",
+        "type": "http in",
+        "z": "1bf518ec.1a9847",
+        "name": "",
+        "url": "/apiusage",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 106,
+        "y": 245,
+        "wires": [
+            [
+                "fe34eb63.bb1128"
+            ]
+        ]
+    },
+    {
+        "id": "a310c4fb.1f96c8",
+        "type": "http response",
+        "z": "1bf518ec.1a9847",
+        "name": "Usage details",
+        "x": 627,
+        "y": 242,
+        "wires": []
+    },
+    {
+        "id": "fe34eb63.bb1128",
+        "type": "function",
+        "z": "1bf518ec.1a9847",
+        "name": "select query",
+        "func": "//msg.topic = \"SELECT api_name, date_format(started_at, '%m/%d/%Y' ) as Date,count(*) as calls FROM konglogs WHERE api_name = '\"+ msg.payload.apiname +\"' AND started_at BETWEEN '\"+ msg.payload.startdate +\"' AND '\"+ msg.payload.enddate +\"' group by Date;\";\nmsg.topic = \"SELECT date_format(started_at, '%m/%d/%Y' ) as Date,count(*) as 'API Calls' FROM konglogs WHERE started_at BETWEEN '\"+ msg.payload.startdate +\"' AND '\"+ msg.payload.enddate +\"' group by Date;\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 283,
+        "y": 243,
+        "wires": [
+            [
+                "146c1511.2f90cb"
+            ]
+        ]
+    },
+    {
+        "id": "96dcfb95.2a0a38",
+        "type": "comment",
+        "z": "1bf518ec.1a9847",
+        "name": "API Usage",
+        "info": "",
+        "x": 87,
+        "y": 198,
+        "wires": []
+    },
+    {
+        "id": "5d5b727e.71898c",
+        "type": "mysql",
+        "z": "1bf518ec.1a9847",
+        "mydb": "5a4da1ee.4f9ad8",
+        "name": "Logs storage",
+        "x": 446,
+        "y": 349,
+        "wires": [
+            [
+                "79992ab8.6cdb64"
+            ]
+        ]
+    },
+    {
+        "id": "3723ccdb.31bf34",
+        "type": "http in",
+        "z": "1bf518ec.1a9847",
+        "name": "",
+        "url": "/apiselect",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 104,
+        "y": 352,
+        "wires": [
+            [
+                "79884598.1395dc"
+            ]
+        ]
+    },
+    {
+        "id": "79992ab8.6cdb64",
+        "type": "http response",
+        "z": "1bf518ec.1a9847",
+        "name": "APIs",
+        "x": 595,
+        "y": 349,
+        "wires": []
+    },
+    {
+        "id": "79884598.1395dc",
+        "type": "function",
+        "z": "1bf518ec.1a9847",
+        "name": "select query",
+        "func": "msg.topic = \"SELECT DISTINCT(api_name) as 'API Name' from konglogs;\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 281,
+        "y": 350,
+        "wires": [
+            [
+                "5d5b727e.71898c"
+            ]
+        ]
+    },
+    {
+        "id": "c9144452.a929d8",
+        "type": "comment",
+        "z": "1bf518ec.1a9847",
+        "name": "Select API",
+        "info": "",
+        "x": 85,
+        "y": 305,
+        "wires": []
+    },
+    {
+        "id": "8f60bdff.388a8",
+        "type": "comment",
+        "z": "1bf518ec.1a9847",
+        "name": "Data Consumption",
+        "info": "",
+        "x": 104,
+        "y": 86,
+        "wires": []
+    }
+]
